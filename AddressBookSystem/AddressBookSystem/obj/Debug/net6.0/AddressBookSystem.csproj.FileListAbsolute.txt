@@ -1,0 +1,15 @@
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.exe
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.deps.json
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.runtimeconfig.json
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.dll
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\bin\Debug\net6.0\AddressBookSystem.pdb
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.AssemblyReference.cache
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfoInputs.cache
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.AssemblyInfo.cs
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.csproj.CoreCompileInputs.cache
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.dll
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\refint\AddressBookSystem.dll
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.pdb
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\AddressBookSystem.genruntimeconfig.cache
+C:\Users\ravir\source\repos\AddressBookSystem\AddressBookSystem\obj\Debug\net6.0\ref\AddressBookSystem.dll
