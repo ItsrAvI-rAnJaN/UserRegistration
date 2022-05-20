@@ -1,0 +1,15 @@
+C:\Users\ravir\source\repos\practicemain\practicemain\bin\Debug\net6.0\practicemain.exe
+C:\Users\ravir\source\repos\practicemain\practicemain\bin\Debug\net6.0\practicemain.deps.json
+C:\Users\ravir\source\repos\practicemain\practicemain\bin\Debug\net6.0\practicemain.runtimeconfig.json
+C:\Users\ravir\source\repos\practicemain\practicemain\bin\Debug\net6.0\practicemain.dll
+C:\Users\ravir\source\repos\practicemain\practicemain\bin\Debug\net6.0\practicemain.pdb
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.csproj.AssemblyReference.cache
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.AssemblyInfoInputs.cache
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.AssemblyInfo.cs
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.csproj.CoreCompileInputs.cache
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.dll
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\refint\practicemain.dll
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.pdb
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\practicemain.genruntimeconfig.cache
+C:\Users\ravir\source\repos\practicemain\practicemain\obj\Debug\net6.0\ref\practicemain.dll
