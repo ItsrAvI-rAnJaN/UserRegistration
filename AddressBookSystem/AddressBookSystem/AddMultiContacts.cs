@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace AddressBookSystem
 {
-    internal class ContactPerson
+    internal class AddMultiContatcs
     {
         // creating New List to Add Data Information
-       public List<AddressBook> AddressList;
+        public List<AddressBook>AddressList;
 
-        public ContactPerson()
+        public AddMultiContatcs()
         {
             // Creating Instance of AddressList 
             AddressList = new List<AddressBook>();
         }
 
         // Defing Method to Add New Contact
-        public void AddNewContact()
+        public void AddMultiNewContact()
         {
             // Taking Output (Contact Deatail) From User to Add In Adreess Book 
             Console.WriteLine("Fill The Details Given Below: ");
@@ -39,34 +39,50 @@ namespace AddressBookSystem
             Console.Write("Email Address : ");
             string Email_Address = Console.ReadLine();
 
-            // Creating Instance & Taking Parameter
+            // Creating Instance & Passing Parameter
             AddressBook addressdetails = new AddressBook(First_Name, Last_Name, Address, City, State, Zip_Code, Phone_Number, Email_Address);
 
 
             // Define Logic if else to Check Contact Details Present or not If not Then Add Contact Detail 
-            if (AddressList.Contains(addressdetails))
+            int CheckDetails = 0;
+            if (AddressList.Count > 0)  // count the Address present in AddressList
             {
-                Console.WriteLine("Details you Enter is Already Present");
+                foreach (AddressBook address in AddressList)
+                {
+                    if (address.First_Name == First_Name && address.Last_Name==Last_Name)
+                    {
+                        CheckDetails = 1; // to check present or not if present then assign CheckDetails is 1.
+                        Console.WriteLine("Name : {0} {1}", address.First_Name,address.Last_Name);
+                    }
+                }
             }
-
+            // if else to check present or not if present go to if block or not then go to else block
+            if (CheckDetails == 1)
+            {
+                Console.WriteLine("The Name You Enter is Already Present in Address Book");
+            }
             else
             {
-                AddressList.Add(addressdetails);
+                AddressList.Add(addressdetails); // add Details in Address Book 
             }
         }
         // Defing Method to Display Contact Details after Add New Contact by User
         public void DisplayContactDetails()
         {
-            // using foreach to acess the Details Present in Address Book..
-            foreach (AddressBook address in AddressList)
+           if (AddressList.Count > 0)
             {
-                // printg Details..
-                Console.WriteLine("\nContact Details are :-");
-                Console.WriteLine("Name : {0} {1}", address.First_Name, address.Last_Name);
-                Console.WriteLine("Address : {0}, {1} ({2})", address.Address, address.City, address.State);
-                Console.WriteLine("Zip Code : {0}", address.Zip_Code);
-                Console.WriteLine("Ph. Number : {0}", address.Phone_Number);
-                Console.WriteLine("Email Address : {0}", address.Email_Address);
+                // using foreach to acess the Details Present in Address Book..
+                foreach (AddressBook address in AddressList)
+                {
+                    // printg Details..
+                    Console.WriteLine("\nContact Details are :-");
+                    Console.WriteLine("Name : {0} {1}", address.First_Name, address.Last_Name);
+                    Console.WriteLine("Address : {0}, {1} ({2})", address.Address, address.City, address.State);
+                    Console.WriteLine("Zip Code : {0}", address.Zip_Code);
+                    Console.WriteLine("Ph. Number : {0}", address.Phone_Number);
+                    Console.WriteLine("Email Address : {0}", address.Email_Address);
+                }
+
             }
         }
 
@@ -145,21 +161,21 @@ namespace AddressBookSystem
                     Console.WriteLine(" Your Input Didn't Present in the Address Books");
                 }
             }
-            
+
         }
-        
-    public void DeleteContactDetails()
+
+        public void DeleteContactDetails()
         {
             // Taking Input(First Name) From User to Delete Contact Details.
             Console.WriteLine("Enter The First Name of Contact Detail You Want to Delete : ");
-            String DeleteContacts =Console.ReadLine();   // storing Input Taken by User
+            String DeleteContacts = Console.ReadLine();   // storing Input Taken by User
             foreach (AddressBook Delete in AddressList)
             {
                 if (Delete.First_Name == DeleteContacts)
                 {
                     AddressList.Remove(Delete);
                     Console.WriteLine("Contact Details Removed");
-                    break ;
+                    break;
                 }
                 else
                 {
