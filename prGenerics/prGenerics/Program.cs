@@ -5,34 +5,17 @@ namespace prGenric
     class program
     {
 
-        //method for integer Array
-        public static void pr_toPrint(int[] inputArray)
+        //method for  Array using Generics..
+        public static void pr_toPrint<T>(T[] inputArray)
         {
-            foreach(int Element in inputArray)
+            foreach(var Element in inputArray)
             {
                 Console.WriteLine(Element);
             }
             Console.WriteLine("##############################################");
 
         }
-        //method for Char Array
-        public static void pr_toPrint(char[] inputArray)
-        {
-            foreach (int Element in inputArray)
-            {
-                Console.WriteLine(Element);
-            }
-            Console.WriteLine("##############################################");
-        }
-        //method for double Array
-        public static void pr_toPrint(double[] inputArray)
-        {
-            foreach (int Element in inputArray)
-            {
-                Console.WriteLine(Element);
-            }
-            Console.WriteLine("##############################################");
-        }
+       
             static void Main(string[] args)
         {
             Console.WriteLine("\t\t\t************ WELCOME TO GENERICS PRACTICE PROBLEM ***************");
