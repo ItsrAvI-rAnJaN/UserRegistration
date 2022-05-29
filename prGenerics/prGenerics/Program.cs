@@ -26,9 +26,9 @@ namespace prGenric
             char[] charArray = { 'H', 'E', 'L', 'L', 'O' };
              
             // print Array
-            program.pr_toPrint(intArray);
-            program.pr_toPrint(doubleArray);
-            program.pr_toPrint(charArray);
+            program.pr_toPrint<int>(intArray);
+            program.pr_toPrint<double>(doubleArray);
+            program.pr_toPrint<char>(charArray);
 
            
             Console.ReadKey();
