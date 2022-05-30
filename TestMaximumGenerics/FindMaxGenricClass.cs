@@ -6,10 +6,22 @@ using System.Threading.Tasks;
 
 namespace TestMaximumGenerics
 {
-    internal class FindMaxGenericsMethod
+    // Defining Generic Class
+    internal class FindMaxGenricClass<T> where T : IComparable
     {
-        // Method to Find Max String Value
-        public T FindMaxGeneric<T>(T Value1, T Value2, T Value3) where T: IComparable
+        // instance generic variable
+        T Value1, Value2, Value3;
+
+
+        // Defining Parameterized Constructor..
+        public FindMaxGenricClass(T Value1,T Value2,T Value3)
+        {
+            this.Value1 = Value1;
+            this.Value2 = Value2;
+            this.Value3 = Value3;
+        }
+
+        public static T FindMaxAmong3(T Value1, T Value2, T Value3)
         {
             // Use CompareTO Comparision B/W  Value
             if (Value1.CompareTo(Value2) > 0 && Value1.CompareTo(Value3) > 0)
@@ -25,7 +37,13 @@ namespace TestMaximumGenerics
                 return Value3;
             }
             return Value1; // Return While All Among Three are Equal
+        }
 
+        // instance method to pass instance generic Variable
+        public T TestMaxValue()
+        {
+            T testmax = FindMaxGenricClass<T>.FindMaxAmong3(this.Value1, this.Value2, this.Value3);
+            return testmax;
         }
     }
 }

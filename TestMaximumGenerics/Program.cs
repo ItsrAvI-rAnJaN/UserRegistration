@@ -17,6 +17,7 @@ namespace TestMaximumGenerics
                 Console.WriteLine("2.Find Maximum Among Three Float");
                 Console.WriteLine("3.Find Maximum Among Three String Value");
                 Console.WriteLine("4.Find Maximum Among Three Value Using Generics Method");
+                Console.WriteLine("5.Find Maximum Among Three Value Using Generic Class");
 
 
                 Console.Write("Enter Your Choice : ");
@@ -98,6 +99,25 @@ namespace TestMaximumGenerics
                         Console.WriteLine("Maximum String Value = {0}", objFindMaxGenericsMethod.FindMaxGeneric("Dane", "Shyam", "Ram"));
 
                         break;
+
+                    case 5:
+
+                        // for Integer Value
+                        FindMaxGenricClass<int> objMaxInt =new FindMaxGenricClass<int>(10,20,30);
+                        Console.WriteLine("Maximum Integer Value ={0}", objMaxInt.TestMaxValue());
+                        Console.WriteLine("###################################################");
+
+                        // For Float Value
+                        FindMaxGenricClass<float> objMaxFloat = new FindMaxGenricClass<float>(10.1f, 20.2f, 30.3f);
+                        Console.WriteLine("Maximum Float value ={0}", objMaxFloat.TestMaxValue());
+                        Console.WriteLine("###################################################");
+
+                        // For String Value
+                        FindMaxGenricClass<string> objMaxString = new FindMaxGenricClass<string>("Ram", "Shyam", "Dane");
+                        Console.WriteLine("Maximum String Value ={0}",objMaxString.TestMaxValue());
+                        Console.WriteLine("###################################################");
+                        break;
+                        
                 }
             } while(Choice !=0);
 
