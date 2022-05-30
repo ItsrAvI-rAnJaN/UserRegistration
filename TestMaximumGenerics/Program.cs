@@ -15,6 +15,8 @@ namespace TestMaximumGenerics
                 Console.WriteLine("0.Exit");
                 Console.WriteLine("1.Find Maximum Among Three Integer");
                 Console.WriteLine("2.Find Maximum Among Three Float");
+                Console.WriteLine("3.Find Maximum Among Three String Value");
+
                 Console.Write("Enter Your Choice : ");
                 Choice=Convert.ToInt32(Console.ReadLine()); // store iput From User & Convert Into Integer type
 
@@ -45,6 +47,17 @@ namespace TestMaximumGenerics
                         Console.WriteLine("Maximum Integer Number = {0}", objFindMaxFloat.FindMaxAmongFloat(1.1f, 3.1f, 2.1f));
 
                         Console.WriteLine("Maximum Integer Number = {0}", objFindMaxFloat.FindMaxAmongFloat(1.1f, 2.1f, 3.1f));
+                        break;
+                    case 3:
+                        // Creating Instance of Class FindMaxFloat
+                        FindMaxString objFindMaxString = new FindMaxString();
+
+                        // printing Max Float No. AMong Three
+                        Console.WriteLine("Maximum Integer Number = {0}", objFindMaxString.FindMaxAmongString("Ram","Shyam","Dane"));
+
+                        Console.WriteLine("Maximum Integer Number = {0}", objFindMaxString.FindMaxAmongString("Shyam", "Dane", "Ram"));
+
+                        Console.WriteLine("Maximum Integer Number = {0}", objFindMaxString.FindMaxAmongString("Dane", "Shyam", "Ram"));
                         break;
                 }
             } while(Choice !=0);
