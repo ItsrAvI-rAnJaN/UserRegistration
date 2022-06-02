@@ -33,6 +33,30 @@ namespace StackAndQueues
             Console.WriteLine("{0} is Add to the Stacks",NewNode.Value);
         }
 
+        // Create to Method for Peek the node from Stacks..
+        internal void Peek()
+        {
+            if(this.Head == null)
+            {
+                Console.WriteLine("Stack is Empty");
+                return;
+            }
+            
+           
+        }
+
+        // Create the Method For Delete First Node From Stacks
+        internal void Pop()
+        {
+            if (this.Head == null)
+            {
+                Console.WriteLine(" Stack is Empty");
+                return;
+            }
+            Console.WriteLine("{0} is Delete from Stack",Head.Value);
+            Head = Head.next;
+        }
+
         // for Dislplaying Stacks
         internal void display()
         {
