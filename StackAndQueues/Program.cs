@@ -11,11 +11,12 @@ namespace StackAndQueues
             int Choice;
             do
             {
-                Console.WriteLine("0.Exit");
+                Console.WriteLine("\n0.Exit");
                 Console.WriteLine("1. Create Stack of 56 ->30->70");
                 Console.WriteLine("2. Peek and Pop till Stack is Empty ");
                 Console.WriteLine("3. Create Queue of 56->30->70");
-                Console.Write("Enter Your Choice :");
+                Console.WriteLine("4. Dequeue/Delete data starting of the Queue ");
+                Console.Write("Enter Your Choice : ");
                 Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
                 {
@@ -61,9 +62,28 @@ namespace StackAndQueues
                         objQueues.Enqueue(70);
                         objQueues.Display();
                         break;
+                    case 4:
+                        Queues objQueues1 = new Queues();
+                        objQueues1.Enqueue(56);
+                        objQueues1.Enqueue(30);  // Adding to The Queue.
+                        objQueues1.Enqueue(70);
+
+                        // Deleting From Queue 1st
+                        objQueues1.Dequeues();
+                        objQueues1.Display();
+
+                        // Deleting From Queue 2nd
+                        objQueues1.Dequeues();
+                        objQueues1.Display();
+
+                        // Deleting From Queue 3rd
+                        objQueues1.Dequeues();
+                        objQueues1.Display();
+
+                        break;
 
 
-                    default:
+                   default:
                         Console.WriteLine("please Enter Correct Choice");
                         break;
 

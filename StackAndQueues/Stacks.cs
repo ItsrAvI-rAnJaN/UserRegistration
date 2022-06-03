@@ -30,7 +30,7 @@ namespace StackAndQueues
                 NewNode.next = Head;
             }
             this.Head = NewNode;
-            Console.WriteLine("{0} is Add to the Stacks",NewNode.Value);
+            Console.WriteLine("{0} is Add to the Stack",NewNode.Value);
         }
 
         // Create to Method for Peek the node from Stacks..
@@ -50,10 +50,10 @@ namespace StackAndQueues
         {
             if (this.Head == null)
             {
-                Console.WriteLine(" Stack is Empty");
+                Console.WriteLine("Stack is Empty");
                 return;
             }
-            Console.WriteLine("{0} is Delete from Stack",Head.Value);
+            Console.WriteLine("\n{0} is Delete from Stack",Head.Value);
             Head = Head.next;
         }
 
@@ -62,18 +62,19 @@ namespace StackAndQueues
         {
             if (this.Head == null)
             {
-                Console.WriteLine(" Stacks is Empty");
+                Console.WriteLine("Stack is Empty");
                 return;
             }
-            Console.WriteLine("The Stacks is:");
-            Console.Write("Head:");
+            Console.Write("\nThe Stack is:");
+            Console.Write("Head:->");
             Node TempNode = this.Head;
             
             while(TempNode != null)
             {
-                Console.WriteLine(TempNode.Value + " ");
+                Console.Write("{0}->", TempNode.Value);
                 TempNode = TempNode.next;
             }
+            Console.WriteLine("Tail");
             
         }
     }

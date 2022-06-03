@@ -30,8 +30,24 @@ namespace StackAndQueues
                 }
                 TempHead.next = NewNode;
             }
-            Console.WriteLine("{0} is Insert in to The Queues",NewNode.Value);
+            Console.WriteLine("{0} is Insert in to The Queue", NewNode.Value);
+
         }
+        internal void Dequeues()
+        {
+            if (Head == null)
+            {
+                Console.WriteLine("Queue is Empty ");
+            }
+            else
+            {
+                Console.WriteLine("\n{0} Deleted from the queue",Head.Value);
+
+                // Assing to the Next Node.
+                Head = Head.next;
+            }
+        }
+
 
         //For Displaying Nodes
         internal void Display()
