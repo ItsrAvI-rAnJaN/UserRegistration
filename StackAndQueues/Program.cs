@@ -14,6 +14,7 @@ namespace StackAndQueues
                 Console.WriteLine("0.Exit");
                 Console.WriteLine("1. Create Stack of 56 ->30->70");
                 Console.WriteLine("2. Peek and Pop till Stack is Empty ");
+                Console.WriteLine("3. Create Queue of 56->30->70");
                 Console.Write("Enter Your Choice :");
                 Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
@@ -21,7 +22,7 @@ namespace StackAndQueues
                     case 1:
                         Stacks objStack = new Stacks();
                         objStack.Push(70);
-                        objStack.Push(30);
+                        objStack.Push(30);   // Adding Data in Stacks.
                         objStack.Push(56);
                         objStack.display();
                         break;
@@ -51,6 +52,14 @@ namespace StackAndQueues
                         Console.WriteLine("After pop 3rd");
                         objStack1.display();
 
+                        break;
+
+                    case 3:
+                        Queues objQueues = new Queues();
+                        objQueues.Enqueue(56);   
+                        objQueues.Enqueue(30);    // Adding Data in Queues..
+                        objQueues.Enqueue(70);
+                        objQueues.Display();
                         break;
 
 
