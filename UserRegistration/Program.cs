@@ -11,6 +11,8 @@ namespace UserRegistration
             {
                 Console.WriteLine("\n1. Please Enter Valid First Name");
                 Console.WriteLine("2. Please Enter Valid Last Name");
+                Console.WriteLine("3. Please Enter Valid Email");
+                Console.WriteLine("4. Please Enter Valid Mobile Number Starting With Country Code");
 
                 Console.WriteLine("Enter 0 for Exit ");
                 Console.Write("Please Enter Your Choice : ");
@@ -29,6 +31,10 @@ namespace UserRegistration
                     case 3:
                         Validation objEmail = new Validation();
                         Console.WriteLine(objEmail.Email("Email"));
+                        break;
+                    case 4:
+                        Validation objPhone = new Validation();
+                        Console.WriteLine(objPhone.MobileNumber());
                         break;
 
                     case 0:
