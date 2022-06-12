@@ -67,6 +67,15 @@ namespace UserRegistration
             string EnteredPassword = Console.ReadLine();
             return Regex.IsMatch(EnteredPassword, REGEX_PASSWORD) ? "Password is Valid" : "Password is Invalid";
         }
+        //Method for Regular expression below will match previous conditions + exactly one special character
+        public string Password4()
+        {
+            string REGEX_PASSWORD = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$";
+
+            Console.Write("Enter password for validation : ");
+            string EnteredPassword = Console.ReadLine();
+            return Regex.IsMatch(EnteredPassword, REGEX_PASSWORD) ? "Password is Valid" : "Password is Invalid";
+        }
 
 
     }

@@ -47,9 +47,14 @@ namespace UserRegistration
                         Console.WriteLine(objPass2.Password2());
                         break;
                     case 7:
-                        var objPass3 = new Validation();
+                        Validation objPass3 = new Validation();
                         Console.WriteLine(objPass3.Password3());
                         break;
+                    case 8:
+                        Validation objPass4 = new Validation();
+                        Console.WriteLine(objPass4.Password4());
+                        break;
+
 
 
                     case 0:
