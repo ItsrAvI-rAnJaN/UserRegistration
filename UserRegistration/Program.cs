@@ -26,12 +26,17 @@ namespace UserRegistration
                         Validation objLastName = new Validation();
                         Console.WriteLine(objLastName.Name("Last"));
                         break;
+                    case 3:
+                        Validation objEmail = new Validation();
+                        Console.WriteLine(objEmail.Email("Email"));
+                        break;
+
                     case 0:
                          return;
                     default:
                         Console.WriteLine("Please Enter Correct Choice");
                         break ;
-
+                        
                 }
             }
             Console.ReadKey();
