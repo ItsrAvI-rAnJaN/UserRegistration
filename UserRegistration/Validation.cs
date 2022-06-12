@@ -40,6 +40,15 @@ namespace UserRegistration
             return Regex.IsMatch(enteredMobileNumber, REGEX_CELLNO) ? "Mobile Number is valid" : "Mobile Number is invalid";
 
         }
+        // Method for Validation of Password 1
+        public string Password1()
+        {
+            string REGEX_PASSWORD = "^.{8,}$";
+
+            Console.Write("Enter Password for validation : ");
+            string EnteredPassword = Console.ReadLine();
+            return Regex.IsMatch(EnteredPassword, REGEX_PASSWORD) ? "Password is Valid" : "Password is Invalid";
+        }
 
     }
 }

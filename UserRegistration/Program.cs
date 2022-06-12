@@ -13,6 +13,7 @@ namespace UserRegistration
                 Console.WriteLine("2. Please Enter Valid Last Name");
                 Console.WriteLine("3. Please Enter Valid Email");
                 Console.WriteLine("4. Please Enter Valid Mobile Number Starting With Country Code");
+                Console.WriteLine("5. Please Enter Valid Password Having Minimum 8 Character");
 
                 Console.WriteLine("Enter 0 for Exit ");
                 Console.Write("Please Enter Your Choice : ");
@@ -36,6 +37,11 @@ namespace UserRegistration
                         Validation objPhone = new Validation();
                         Console.WriteLine(objPhone.MobileNumber());
                         break;
+                    case 5:
+                        Validation objPass1 = new Validation();
+                        Console.WriteLine(objPass1.Password1());
+                        break;
+
 
                     case 0:
                          return;
