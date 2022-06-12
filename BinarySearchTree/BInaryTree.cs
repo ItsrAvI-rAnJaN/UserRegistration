@@ -43,9 +43,9 @@ namespace BinarySearchTree
                 // Define Logic Left Tree is null or not when Null then Add & if not Null Then Recursive Method call to add.
                 if (LeftTree == null)
                 {
-                      LeftTree = new BinaryTree<T>(Item);
+                    LeftTree = new BinaryTree<T>(Item);
                 }
-                
+
                 else
                 {
                     LeftTree.Insert(Item);
@@ -76,7 +76,7 @@ namespace BinarySearchTree
                 LeftTree.Display(); // To display Left Sub-Tree
             }
 
-           // Printing Value Present in Node
+            // Printing Value Present in Node
             Console.Write(NodeData.ToString() + " ");
 
             //Define Logic When Right Tree is not null or Value Present then increment the node count of right subtree
@@ -85,6 +85,13 @@ namespace BinarySearchTree
                 RightCount++;
                 RightTree.Display(); // To Display Right Sub-Tree
             }
+
+        }
+        //For calculating The Size of Binary Search Tree
+        public void Size()
+        {
+            // Printing All Node Count
+            Console.WriteLine("\nSize of the BST is :  " + (1+RightCount+LeftCount));
         }
 
     }
