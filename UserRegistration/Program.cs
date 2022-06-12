@@ -15,6 +15,7 @@ namespace UserRegistration
                 Console.WriteLine("4. Please Enter Valid Mobile Number Starting With Country Code");
                 Console.WriteLine("5. Please Enter Valid Password having Minimum 8 Character");
                 Console.WriteLine("6. Please Enter Valid Password having at Least one Upper Case ");
+                Console.WriteLine("7. Please Enter Valid Password having at least one Numeric ");
                 Console.WriteLine("Enter 0 for Exit ");
                 Console.Write("Please Enter Your Choice : ");
 
@@ -44,6 +45,10 @@ namespace UserRegistration
                     case 6:
                         Validation objPass2 = new Validation();
                         Console.WriteLine(objPass2.Password2());
+                        break;
+                    case 7:
+                        var objPass3 = new Validation();
+                        Console.WriteLine(objPass3.Password3());
                         break;
 
 
