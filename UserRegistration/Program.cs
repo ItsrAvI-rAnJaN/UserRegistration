@@ -10,9 +10,10 @@ namespace UserRegistration
             while (true)
             {
                 Console.WriteLine("\n1. Please Enter Valid First Name");
+                Console.WriteLine("2. Please Enter Valid Last Name");
 
                 Console.WriteLine("Enter 0 for Exit ");
-                Console.WriteLine("Please Enter Your Choice");
+                Console.Write("Please Enter Your Choice : ");
 
                 int Choice = Convert.ToInt32(Console.ReadLine());
                 switch (Choice)
@@ -21,11 +22,16 @@ namespace UserRegistration
                         Validation objFirstName = new Validation();
                         Console.WriteLine(objFirstName.Name("First"));
                         break;
+                    case 2:
+                        Validation objLastName = new Validation();
+                        Console.WriteLine(objLastName.Name("Last"));
+                        break;
                     case 0:
                          return;
                     default:
                         Console.WriteLine("Please Enter Correct Choice");
                         break ;
+
                 }
             }
             Console.ReadKey();
