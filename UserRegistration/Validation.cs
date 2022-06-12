@@ -76,7 +76,23 @@ namespace UserRegistration
             string EnteredPassword = Console.ReadLine();
             return Regex.IsMatch(EnteredPassword, REGEX_PASSWORD) ? "Password is Valid" : "Password is Invalid";
         }
+        public void EmailsTest()
+        {
+            Validation objvalidtest = new Validation();
+            Console.WriteLine("A. Valid Emails");
+            string[] ValidEmails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+            for (int i = 0; i < ValidEmails.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + ValidEmails[i] + " : " + objvalidtest.Email(ValidEmails[i]));
+            }
+            Console.WriteLine("\nB. Invalid Emails");
+            string[] InvalidEmails = { "abc", "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+            for (int i = 0; i < InvalidEmails.Length; i++)
+            {
+                Console.WriteLine((i + 1) + ". " + InvalidEmails[i] + " : " + objvalidtest.Email(InvalidEmails[i]));
+            }
 
 
+        }
     }
 }

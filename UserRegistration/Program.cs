@@ -16,6 +16,8 @@ namespace UserRegistration
                 Console.WriteLine("5. Please Enter Valid Password having Minimum 8 Character");
                 Console.WriteLine("6. Please Enter Valid Password having at Least one Upper Case ");
                 Console.WriteLine("7. Please Enter Valid Password having at least one Numeric ");
+                Console.WriteLine("8. please Enter valid Password having at least one Special Character");
+                Console.WriteLine("9. Test All Sample Emails Provided Separately ");
                 Console.WriteLine("Enter 0 for Exit ");
                 Console.Write("Please Enter Your Choice : ");
 
@@ -54,8 +56,10 @@ namespace UserRegistration
                         Validation objPass4 = new Validation();
                         Console.WriteLine(objPass4.Password4());
                         break;
-
-
+                    case 9:
+                        Validation objTestEmails = new Validation();
+                        objTestEmails.EmailsTest();
+                        break;
 
                     case 0:
                          return;
