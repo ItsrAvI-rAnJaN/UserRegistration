@@ -42,6 +42,24 @@ namespace BinarySearchTree
                     objTree2.Display();
                     objTree2.Size();
                     break;
+                case 3:
+                    BinaryTree<int> objTree3 = new BinaryTree<int>(56);
+                    objTree3.Insert(30);
+                    objTree3.Insert(70);
+                    objTree3.Insert(22);
+                    objTree3.Insert(40);
+                    objTree3.Insert(60);
+                    objTree3.Insert(95);
+                    objTree3.Insert(11);
+                    objTree3.Insert(65);
+                    objTree3.Insert(3);
+                    objTree3.Insert(16);
+                    objTree3.Insert(63);
+                    objTree3.Insert(67);
+                    Console.WriteLine("Binary Search Tree is Shown Below:- ");
+                    objTree3.Display();
+                    objTree3.IsSearch(63,objTree3);
+                    break;
                 case 0:
                     return;
                     

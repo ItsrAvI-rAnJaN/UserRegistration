@@ -65,6 +65,37 @@ namespace BinarySearchTree
                 }
             }
         }
+        //Creatin Method for Searching  value in Binary search tree
+        //Contains two parameters 1. value 2. Binary search tree
+        public void IsSearch(T Element, BinaryTree<T> binaryTree)
+        {
+            //if the tree is empty
+            if (binaryTree == null)
+            {
+                //Return not Present
+                Console.WriteLine("Element is Not Present");
+            }
+            //if Element in the tree is euals to the Elements
+            if (binaryTree.NodeData.Equals(Element))
+            {
+                //print that element is present in the tree
+                Console.WriteLine("\n" + binaryTree.NodeData + " is Present in Binary is Tree");
+            }
+
+            // Define Logic for Greater Than or Less than 
+            if (Element.CompareTo(binaryTree.NodeData) < 0)
+            {
+                //Search in Left Tree
+                IsSearch(Element, binaryTree.LeftTree);
+            }
+
+            if (Element.CompareTo(binaryTree.NodeData) > 0)
+            {
+                //Serach in Right Tree
+                IsSearch(Element, binaryTree.RightTree);
+            }
+        }
+
 
         //For displaying binary search tree
         public void Display()
