@@ -58,7 +58,7 @@ namespace UserRegistration
                         break;
                     case 9:
                         Validation objTestEmails = new Validation();
-                        objTestEmails.EmailsTest();
+                        objTestEmails.EmailsTest();                         
                         break;
 
                     case 0:

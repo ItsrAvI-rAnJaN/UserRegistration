@@ -76,6 +76,7 @@ namespace UserRegistration
             string EnteredPassword = Console.ReadLine();
             return Regex.IsMatch(EnteredPassword, REGEX_PASSWORD) ? "Password is Valid" : "Password is Invalid";
         }
+        // Method to Test Valid & InValid email
         public void EmailsTest()
         {
             Validation objvalidtest = new Validation();
