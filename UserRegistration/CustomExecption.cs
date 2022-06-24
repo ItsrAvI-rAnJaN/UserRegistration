@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace UserRegistration
 {
-    internal class CustomExecption : Exception
+    public class CustomExecption : Exception
     {
         public string message;
 

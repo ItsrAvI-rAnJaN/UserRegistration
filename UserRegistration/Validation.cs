@@ -9,7 +9,7 @@ namespace UserRegistration
 {
     public class Validation
     {
-        public string Name(string name)
+        public Func<string, string> Name = (name) =>
         {
             //Regular expression or validating name
             string REGEX_FIRSTNAME = "^[A-Z][A-Za-z]{2,}$";
@@ -41,9 +41,9 @@ namespace UserRegistration
             {
                 return ex.Message;
             }
-        }
+        };
 
-        public string Email(string email)
+        public Func<string, string> Email = (email) =>
         {
             //regular expression for validating email
             string REGEX_EMAIL = "^([A-Za-z]){3,}(([_.+-]?)([0-9A-Za-z]{1,}))*@[a-z0-9]+[.](com|net){0,1}([.]((com)|([a-z]{2}){0,1})){0,1}$";
@@ -75,15 +75,12 @@ namespace UserRegistration
             {
                 return ex.Message;
             }
-        }
+        };
 
-        public string MobileNumber()
+        public Func<string, string> Mobile = (enteredMobileNumber) =>
         {
             //Regular expression for checking mobile number, all mobile numbers starts with 6, 7, 8 or 9
-            string REGEX_CELLNO = "^[+][1-9]{1,3}[ ][6-9]{1}[0-9]{9}$";
-
-            Console.Write("Enter country code with Mobile number for validation (give a space between them, write '+' at the beginning) : ");
-            string enteredMobileNumber = Console.ReadLine();
+            string REGEX_CELLNO = "^[1-9]{1,3}[ ][6-9]{1}[0-9]{9}$";
 
             try
             {
@@ -109,7 +106,7 @@ namespace UserRegistration
             {
                 return ex.Message;
             }
-        }
+        };
 
         public string Password1()
         {
@@ -141,58 +138,60 @@ namespace UserRegistration
             return Regex.IsMatch(enteredPassword, REGEX_PASS) ? "Password is valid" : "Password is invalid";
         }
 
-        public string Password4()
+        public Func<string, string> Password4 = (enteredPassword) =>
         {
             //Regular expression below will match previous conditions + exactly one special character
             string REGEX_PASS = "^(?=.*[A-Z])(?=.*[0-9])(?=.*[^0-9a-zA-Z])(?!.*[^0-9a-zA-Z].*[^0-9a-zA-Z]).{8,}$";
-
-            Console.Write("Enter password for validation : ");
-            string enteredPassword = Console.ReadLine();
 
             try
             {
                 if (enteredPassword.Equals(""))
                 {
-                    throw new CustomExecption(CustomExecption.ExceptionType.EMPTY_STRING, "Password not be Empty");
+                    throw new CustomExecption(CustomExecption.ExceptionType.EMPTY_STRING, "Password not be empty");
                 }
                 if (enteredPassword.Equals(null))
                 {
-                    throw new CustomExecption(CustomExecption.ExceptionType.NULL_STRING, "Password not be Null");
+                    throw new CustomExecption(CustomExecption.ExceptionType.NULL_STRING, "Password not be ull");
                 }
                 if (Regex.IsMatch(enteredPassword, REGEX_PASS))
                 {
-                    Console.WriteLine("Password is Valid");
+                    Console.WriteLine("Password is valid");
                     return enteredPassword;
                 }
                 else
                 {
-                    throw new CustomExecption(CustomExecption.ExceptionType.INVALID_STRING, "Password be Valid");
+                    throw new CustomExecption(CustomExecption.ExceptionType.INVALID_STRING, "Password be valid");
                 }
             }
             catch (NullReferenceException ex)
             {
                 return ex.Message;
             }
-        }
+        };
 
-        // Method to Test Valid & InValid email
+        //Method to test each Valid and Invalid email provided separately for testing
         public void EmailsTest()
         {
-            Validation objvalidtest = new Validation();
+            Validation validate = new Validation();
             Console.WriteLine("A. Valid Emails");
-            string[] ValidEmails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
-            for (int i = 0; i < ValidEmails.Length; i++)
+            string[] validEmails = { "abc@yahoo.com", "abc-100@yahoo.com", "abc.100@yahoo.com", "abc111@abc.com", "abc-100@abc.net", "abc.100@abc.com.au", "abc@1.com", "abc@gmail.com.com", "abc+100@gmail.com" };
+            for (int i = 0; i < validEmails.Length; i++)
             {
-                Console.WriteLine((i + 1) + ". " + ValidEmails[i] + " : " + objvalidtest.Email(ValidEmails[i]));
+                Console.WriteLine((i + 1) + ". " + validEmails[i] + " : " + validate.Email(validEmails[i]));
             }
             Console.WriteLine("\nB. Invalid Emails");
-            string[] InvalidEmails = { "abc", "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
-            for (int i = 0; i < InvalidEmails.Length; i++)
+            string[] invalidEmails = { "abc", "abc@.com.my", "abc123@gmail.a", "abc123@.com", "abc123@.com.com", ".abc@abc.com", "abc()*@gmail.com", "abc@%*.com", "abc..2002@gmail.com", "abc.@gmail.com", "abc@abc@gmail.com", "abc@gmail.com.1a", "abc@gmail.com.aa.au" };
+            for (int i = 0; i < invalidEmails.Length; i++)
             {
-                Console.WriteLine((i + 1) + ". " + InvalidEmails[i] + " : " + objvalidtest.Email(InvalidEmails[i]));
+                Console.WriteLine((i + 1) + ". " + invalidEmails[i] + " : " + validate.Email(invalidEmails[i]));
             }
-
-
         }
+
+
+
+
+
+
+
     }
 }

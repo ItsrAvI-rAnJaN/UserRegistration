@@ -34,11 +34,14 @@ namespace UserRegistration
                         break;
                     case 3:
                         Validation objEmail = new Validation();
-                        Console.WriteLine(objEmail.Email("Email"));
+                        Console.WriteLine("abc+100@gmail.com : " + objEmail.Email("abc+100@gmail.com"));
+                        Console.WriteLine("abc@gmail.com.aa.au : " + objEmail.Email("abc@gmail.com.aa.au"));
                         break;
                     case 4:
                         Validation objPhone = new Validation();
-                        Console.WriteLine(objPhone.MobileNumber());
+                        Console.Write("Enter country code with Mobile number for validation (give a space between them) : ");
+                        string enteredMobileNumber = Console.ReadLine();
+                        Console.WriteLine(objPhone.Mobile(enteredMobileNumber));
                         break;
                     case 5:
                         Validation objPass1 = new Validation();
@@ -54,7 +57,9 @@ namespace UserRegistration
                         break;
                     case 8:
                         Validation objPass4 = new Validation();
-                        Console.WriteLine(objPass4.Password4());
+                        Console.Write("Enter password for validation : ");
+                        string enteredPassword = Console.ReadLine();
+                        Console.WriteLine(objPass4.Password4(enteredPassword));
                         break;
                     case 9:
                         Validation objTestEmails = new Validation();
